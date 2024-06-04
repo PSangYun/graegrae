@@ -1,0 +1,136 @@
+.settingPg{
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+ 
+.sidebar {
+    width: 20%;
+    background-image: url("../public/background.png");
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+    min-width: 200px;
+  }
+.settingRightSide{
+    width: 80%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 0;
+    min-width: 1100px;
+
+}
+.settingTitle{
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    margin-right:100px;
+    margin-left: auto;
+    margin-top:5%;
+
+}
+.settingMyInfoWrap, .settingChat{
+    display: flex;
+    width:600px;
+    margin: 30px;
+    flex-direction: column;
+}
+.settingMyInfoTitle, .settingChatTitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+.settingLine{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1.5px solid #A0A0A0;
+    line-height: 0.3em;
+    margin: 5px 0 5px;
+}
+.settingEditWrap{
+    display: flex;
+    flex-direction: row;
+    height:160px;
+}
+.editTypeWrap{
+    margin:0 10px;
+    width:150px;
+}
+.editType{
+    font-size: 16px;
+    font-weight: bold;
+    margin:15px;
+}
+.editedWrap{
+    flex-direction: column;
+    width: 300px;
+    margin:0 10px;
+}
+.edited{
+    font-size: 16px;
+    margin:15px;
+}
+.editBtn{
+    background-color: rgb(0,0,0,0);
+    color: gray;
+    width: 100px;
+    font-size: 14px;
+    height:30px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+}
+.editInput{
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 10px;
+    outline:none;
+    border-color: #A0A0A0;
+    border-width: 1px;
+    background-color: rgb(0,0,0,0);
+    height: 25px;
+    width: 220px;
+}
+.editCompleteBtn{
+    background-color: #78350F;
+    color: white;
+    font-weight: bold;
+    width: 70px;
+    font-size: 14px;
+    height:30px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    border-color: rgb(0,0,0,0);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.settingDeleteChat{
+    width: 200px;
+    height: 30px;
+    text-align: start;
+    margin:10px;
+    color: red;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+}
+.settingLogout{
+    font-size: 15px;
+    font-weight: 550;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    cursor: pointer;
+    color: gray;
+}
