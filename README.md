@@ -17,7 +17,7 @@
 
 **VS Code 설치** <https://code.visualstudio.com/>
 
-**Python 설치** <https://www.python.org/downloads/>
+**Python(3.4버전 이상) 설치** <https://www.python.org/downloads/>
 
 <br/>
 
