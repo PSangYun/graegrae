@@ -135,3 +135,7 @@ vscode 터미널 2개 생성
 * 언어 : Javascript. Python
 * 프레임워크 : Flask
 * 데이터베이스 : Firebase
+
+<br/><br/>
+
+This project is licensed under the terms of the ~~~.
