@@ -86,6 +86,27 @@ vscode 터미널 2개 생성
 
 <br/>
 
+***
+
+<br/>
+
+다음은 앱 실행을 위한 추가적인 코드이다.
+
+*위의 단계들이 모두 무사히 마친 다음에 실행된 채로 진행*
+
+> *터미널3*
+
+```
+  npm install -g expo-cli
+
+  npm start
+```
+
+  * 개인 휴대폰에 expo 설치
+  * qr코드 찍어 expo를 통해 실행
+
+<br/>
+
 ## 💻프로젝트 소개
 * 메인 화면
    * 접속마다 다른 인물 생성
@@ -109,6 +130,7 @@ vscode 터미널 2개 생성
 ## ⚙개발환경
 * Visual Studio Code
 * React
+* React Native
 * Node.js
 * 언어 : Javascript. Python
 * 프레임워크 : Flask
