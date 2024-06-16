@@ -19,6 +19,8 @@
 
 **Python(3.4버전 이상) 설치** <https://www.python.org/downloads/>
 
+**cmd창에 ipconfig 입력 후 무선 LAN 어댑터 Wi-Fi의 IPv4주소 복사해두기(이후 ip라 칭함)**
+
 <br/>
 
 git clone 후 vscode에서 폴더 오픈
@@ -97,6 +99,11 @@ vscode 터미널 2개 생성
 *위의 단계들을 모두 무사히 마친 다음에 터미널 3개 생성 후 진행*
 
 *전 단계에서 실행시켰던 것들 모두 종료 후 진행*
+
+<br/>
+
+* FrontApp의 ChatStart.jsx에서 107번째 줄의 localhost -> ip 바꾸기 (ex: http://ip:5000 ~)
+* greaApp의 App.js에서 41번째 줄의 localhost -> ip 바꾸기 (ex: http://ip:3000/)
 
 <br/>
 
