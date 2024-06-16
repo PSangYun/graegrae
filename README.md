@@ -92,12 +92,37 @@ vscode 터미널 2개 생성
 
 다음은 앱 실행을 위한 추가적인 코드이다.
 
-*위의 단계들이 모두 무사히 마친 다음에 실행된 채로 진행*
+*위의 단계들이 모두 무사히 마친 다음에 터미널 3개 생성 후 진행*
+
+> *터미널1*
+
+```
+  cd Back
+
+  python application.py
+```
+
+<br/>
+
+> *터미널2*
+```
+  cd FrontApp
+
+  npm install
+
+  npm start
+```
+
+<br/>
 
 > *터미널3*
 
 ```
-  cd gregreM
+  cd greaApp
+
+  npm install
+
+  npx expo install react-native-webview
 
   npm install -g expo-cli
 
