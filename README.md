@@ -115,8 +115,6 @@ vscode 터미널 2개 생성
   cd FrontApp
 
   npm install
-
-  npm install
   
   npm install @react-oauth/google @reduxjs/toolkit react-redux
    
