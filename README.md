@@ -194,8 +194,6 @@ vscode 터미널 2개 생성
 * 인물 프로필 Carousel
   
   <https://codesandbox.io/p/sandbox/1v96j74484?file=%2Fsrc%2Fexample.js%3A8%2C26&view=preview>
-
-<br/>
   
 * 오픈AI API 호출
   
