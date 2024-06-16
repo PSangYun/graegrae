@@ -88,7 +88,7 @@ vscode 터미널 2개 생성
 
 ***
 
-다음은 앱 실행을 위한 추가적인 코드이다.
+다음은 앱 실행을 위한 추가적인 절차이다.
 
 <br/>
 
@@ -133,6 +133,8 @@ vscode 터미널 2개 생성
   npm start
 ```
 
+  *컴퓨터와 휴대폰이 같은 네트워크여야 한다.*
+
   * 개인 휴대폰에 expo 설치
   * qr코드 찍어 expo를 통해 실행
 
@@ -166,6 +168,11 @@ vscode 터미널 2개 생성
 * 언어 : Javascript. Python
 * 프레임워크 : Flask
 * 데이터베이스 : Firebase
+
+<br/>
+
+## 👨‍💻사용 오픈소스
+* <https://codesandbox.io/p/sandbox/1v96j74484?file=%2Fsrc%2Fexample.js%3A8%2C26&view=preview>
 
 <br/><br/>
 
