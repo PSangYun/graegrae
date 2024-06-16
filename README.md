@@ -28,6 +28,8 @@ git clone 후 vscode에서 폴더 오픈
   
   Front 폴더에 삽입
 
+  FrontApp 폴더에 삽입
+
 * **serviceAccountKey.json**
 
   Back 폴더에 삽입
@@ -172,7 +174,8 @@ vscode 터미널 2개 생성
 <br/>
 
 ## 👨‍💻사용 오픈소스
-* <https://codesandbox.io/p/sandbox/1v96j74484?file=%2Fsrc%2Fexample.js%3A8%2C26&view=preview>
+* 인물 프로필 Carousel <https://codesandbox.io/p/sandbox/1v96j74484?file=%2Fsrc%2Fexample.js%3A8%2C26&view=preview>
+* 오픈AI API 호출 <https://github.com/minji337/jjinchin>
 
 <br/><br/>
 
