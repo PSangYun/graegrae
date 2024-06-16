@@ -19,6 +19,8 @@
 
 **Python(3.4버전 이상) 설치** <https://www.python.org/downloads/>
 
+<br/>
+
 **cmd창에 ipconfig 입력 후 무선 LAN 어댑터 Wi-Fi의 IPv4주소 복사해두기(이후 ip라 칭함)**
 
 <br/>
