@@ -199,6 +199,10 @@ vscode 터미널 2개 생성
   
   <https://github.com/minji337/jjinchin>
 
+* 홈 화면 인물 카드
+
+  <https://uiverse.io/eslam-hany/selfish-bobcat-73>
+
 <br/><br/>
 
 This project is licensed under the terms of the ~~~.
