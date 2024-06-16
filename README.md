@@ -97,6 +97,8 @@ vscode 터미널 2개 생성
 > *터미널3*
 
 ```
+  cd gregreM
+
   npm install -g expo-cli
 
   npm start
