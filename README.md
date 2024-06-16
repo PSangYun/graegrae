@@ -116,6 +116,16 @@ vscode 터미널 2개 생성
 
   npm install
 
+  npm install
+  
+  npm install @react-oauth/google @reduxjs/toolkit react-redux
+   
+  npm install firebase
+   
+  npm install react-spring-3d-carousel
+    
+  npm install @mui/material @emotion/react @emotion/styled
+
   npm start
 ```
 
