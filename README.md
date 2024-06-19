@@ -21,7 +21,7 @@
 
 <br/>
 
-**cmd창에 ipconfig 입력 후 무선 LAN 어댑터 Wi-Fi의 IPv4주소 복사해두기(이후 ip라 칭함)**
+**cmd창에 ipconfig 입력(window 기준) 후 무선 LAN 어댑터 Wi-Fi의 IPv4주소 복사해두기(이후 [ip]라 칭함)**
 
 <br/>
 
@@ -104,8 +104,8 @@ vscode 터미널 2개 생성
 
 <br/>
 
-* FrontApp의 ChatStart.jsx에서 107번째 줄의 localhost -> ip 바꾸기 (ex: http://ip:5000 ~)
-* greaApp의 App.js에서 41번째 줄의 localhost -> ip 바꾸기 (ex: http://ip:3000/)
+* FrontApp의 ChatStart.jsx에서 107번째 줄의 fetch경로를 자신의 [ip]를 포함한 uri로 바꾼다. (ex: http://***[ip]***:5000/chat-api)
+* greaApp의 App.js에서 42번째 줄의 uri를 자신의 [ip]를 포함한 uri로 바꾼다.  (ex: http://***[ip]***:3000/)
 
 <br/>
 
