@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0; /* 화면 전체 높이를 채우도록 설정 */
+    width: 100%; /* 화면 전체 너비를 채우도록 설정 */
+    overflow: hidden; /* 필요한 경우 스크롤바가 나타나지 않도록 설정 */
+  }
+
+  .ProfileDetail {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto;
+  }
+  .ProfileMainContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto; /* 세로 스크롤을 표시하고 내용이 넘칠 때 스크롤 가능하도록 설정 */
+    
+
+  }
+  .promenuBtn{
+    margin-top:5%;
+    background-image: url("../public/menuIcon.png");
+    background-color: rgba(0,0,0,0);
+    background-size: contain; /* 이미지를 버튼 내에 전체적으로 보여지도록 조정합니다. */
+    background-repeat: no-repeat; /* 이미지 반복을 막습니다. */
+    background-position: center;
+    border:none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    z-index: 10; 
+  }
+
+  .profileBackground {
+
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .profileImage {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(0%, -50%);
+    margin-bottom: -20%;
+  }
+  
+  .profileName {
+
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 0;
+  }
+
+  .profileComment {
+    margin-top: 5px;
+    color: black;
+    font-weight: 400;
+  }

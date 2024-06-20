@@ -1,0 +1,106 @@
+body {
+  background-image: url("../public/backG.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.loginpage {
+  margin-top:25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  height: 90vh;
+}
+.loginLogo{
+  image-rendering: url("../public/logo.png");
+  width:30%;
+  height:auto;
+  margin:5% 0;
+}
+
+.loginTitleWrap{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size:70px;
+  font-weight: bold;
+  margin-bottom:10%;
+  pointer-events : none;
+}
+
+.loginInputWrap{
+  width: 70%;  
+  padding: 10px;   
+  margin: 5px 0;   
+  border-radius: 30px;    
+  background-color: white;
+  border: 1px solid #C8C8C8;
+  height: 22px;
+}
+
+.loginInputWrap:focus-within{
+  border:1px solid #78350F;
+}
+.loginInput{
+  width:80%;
+  height: 17px;
+  margin:0 5%;
+  outline:none;
+  border:none;
+  font-size: 14px;
+  font-weight: 400;
+}
+.loginErrorMessageWrap{
+  margin-bottom: 8px;
+  color:red;
+  font-size: 12px;
+}
+
+.loginLoginBt{
+  width:100px;      
+  padding: 5px;
+  margin:10px;
+  border-radius:10px;
+  border: 1px solid #78350F;
+  box-sizing: border-box;
+  color:white;
+  background-color:#78350F;
+  font-size:20px;
+  font-weight:530;
+  cursor: pointer;
+}
+.loginLoginBt:disabled{
+  background-color: gray;
+  border:1px solid gray;
+  pointer-events : none;
+}
+.loginJoinBt{
+  margin-top:15px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  background-color:rgba(0,0,0,0);
+  border : rgba(0,0,0,0);
+  color:BLUE;
+  cursor: pointer;
+}
+.loginLine{
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  line-height: 0.3em;
+  margin: 5px 0 5px;
+}
+.loginGoogleBt{
+  background-image: url("../public/google.png");
+  background-color: rgba(0,0,0,0);
+  background-size: contain; /* 이미지를 버튼 내에 전체적으로 보여지도록 조정합니다. */
+  background-repeat: no-repeat; /* 이미지 반복을 막습니다. */
+  background-position: center;
+  margin-top:15px;
+  border:none;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}

@@ -1,0 +1,34 @@
+.cardImgBtn{
+    width: 240px;
+    height: 320px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border:none;
+}
+.carousel-nav {
+    background: none;
+    border: none;
+    color: rgb(0,0,0,0);
+    font-size: 60px;
+    margin-top: 3%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .left-nav {
+    margin-right: 2%;
+    background-image: url("../public/leftarrow.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .right-nav {
+    margin-left:2%;
+    background-image: url("../public/rightarrow.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

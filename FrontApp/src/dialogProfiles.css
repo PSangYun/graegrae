@@ -1,0 +1,84 @@
+.container {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column; /* 컨테이너를 세로 방향으로 배치합니다. */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.containerDialog {
+    display: flex;
+    flex-direction: column; /* 다이얼로그를 세로 방향으로 배치합니다. */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70%;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: auto;
+}
+
+.containerHeader {
+    display: flex;
+    margin-top: 8%;
+    padding-bottom: 2%;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #C8C8C8;
+}
+.dialogTitle{
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.dialogCloseBtn{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0, 0.0);
+    border-color: rgb(0, 0, 0, 0);
+}
+
+
+.dialogProfileBtn {
+    padding: 1%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10%;
+    font-size: 15px;
+    color: black;
+    border-color: rgb(0, 0, 0, 0);
+    background-color: rgb(0, 0, 0, 0);
+    cursor: pointer;
+    margin-bottom:2%;
+}
+
+.dialogProfileImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/* 버튼을 가로로 정렬하고 간격을 조절합니다. */
+.dialogBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* 요소들이 너비를 벗어나면 다음 줄로 내려갑니다. */
+    margin-top:0;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right:5%;
+    overflow-y: auto;
+}

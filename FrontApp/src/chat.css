@@ -1,0 +1,276 @@
+.Chatbody {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .chatListBody{
+    width:100%;
+    justify-content: center;
+    display:flex;
+    background-size: cover;
+    flex-direction: column;
+  }
+  .chatListTitle{
+    width:100%;
+    font-weight: bold;
+    border-bottom: 0.5px solid #C8C8C8;
+    height: 10%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .listTitle{
+    font-size: 30px;
+    color:#78350F;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .chatPlusChatBtn{
+    width: 40px;
+    height: 40px;
+    background-color:rgba(0, 0, 0, 0) ;
+    border-color: rgba(0, 0, 0, 0);
+    background-image: url(/public/plusChatIcon.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .chatmenuBtn{
+    background-image: url("../public/menuIcon.png");
+    background-color: rgba(0,0,0,0);
+    background-size: contain; /* 이미지를 버튼 내에 전체적으로 보여지도록 조정합니다. */
+    background-repeat: no-repeat; /* 이미지 반복을 막습니다. */
+    background-position: center;
+    border:none;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .chatLists{
+    width:100%;
+    height: 90%;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .chatListWrap{
+    width:100%;
+    height:90px;
+    background-color: rgb(0,0,0,0);
+    border-color: rgb(0,0,0,0);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    border-top: 0.5px solid #C8C8C8;
+  }
+
+  .chatListImg{
+    width:55px;
+    height:55px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin:10px;
+  }
+  .chatListrightWrap{
+    margin-left: 10px;
+    height: 90%;
+    width: 70%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .chatListName{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: black;
+  }
+  .chatListMsg{ 
+    white-space: nowrap;      
+    overflow: hidden;           
+    text-overflow: ellipsis; 
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    color: gray;
+  }
+  .listbottomSpace{
+    width:100%;
+    height: 1%;
+  }
+
+
+/*chatStart*/
+  .chatRightSide{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chatPersonName{
+    height: 10%;
+    width: 100%;
+    border-bottom: 0.5px solid #C8C8C8;
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+    color: black;
+    flex-direction: row;
+    flex: 0 0 auto; 
+ 
+  }
+  .chatWho{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: end;
+    margin-right: 2%;
+  }
+  .personImg{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:0 2%;
+  }
+  
+  .chatInfoBtn{
+    width: 35px;
+    height: 35px;
+    margin-right:20px;
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    background-image: url(/public/infoIcon.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    
+
+  }
+  .chatWrap{
+    width:95%;
+    height: 60%;
+    overflow-y: auto; /* 세로 스크롤을 표시하고 내용이 넘칠 때 스크롤 가능하도록 설정 */
+    
+    flex: 1 1 auto;
+    padding: 2.5%;
+    background-image: url("../public/background.png");
+    background-size: cover;
+  }
+
+.message {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+.AI{
+  margin-left: 2%;
+  color:black;
+}
+
+.message.user {
+    background-color: #78350F;
+    align-self: flex-end;
+    margin-left: auto;
+    color: white;
+}
+
+.message.AI {
+    background-color: #EBCBB9;
+    align-self: flex-start;
+    margin-right: auto;
+    color: black;
+}
+
+.messageWait {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+}
+.inputSpace{
+  width:100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid #C8C8C8;
+  flex: 0 0 auto;
+}
+.inputWrap{
+    border: 1px solid #C8C8C8;
+    width:80%;
+    height: 45px;
+    background-color: white;
+    border-radius: 20px; 
+    display: flex;   
+}
+.chatInput {
+    background-color: rgba(0, 0, 0, 0);
+    width: 85%;
+    margin: 0 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 15px;
+}
+.chatInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+.chatSendMsg {
+    width: 40px;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0) ;
+    border-color: rgba(0, 0, 0, 0);
+    background-image: url(/public/sendIcon.png);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/*chatMain*/
+.startChatWrap{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.StartChatBtn{
+  width:150px;      
+  padding: 5px;
+  margin:20px;
+  border-radius:10px;
+  border: 1px solid #78350F;
+  box-sizing: border-box;
+  color:white;
+  background-color:#78350F;
+  font-size:18px;
+  font-weight:530;
+  cursor: pointer;
+}

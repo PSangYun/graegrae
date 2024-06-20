@@ -1,0 +1,1237 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Chatbot and Authentication API",
+    "description": "API for user login, registration, and interaction with a chatbot using OpenAI API.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/login": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "User login",
+        "description": "Endpoint for user login with email and password",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "test@jbnu.ac.kr"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "testtest1234!!"
+                  },
+                  "returnSecureToken": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                },
+                "required": [
+                  "email",
+                  "password",
+                  "returnSecureToken"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful login",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "idToken": {
+                      "type": "string",
+                      "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI1ZTk3Zjcw..."
+                    },
+                    "expiresIn": {
+                      "type": "string",
+                      "example": "3600"
+                    },
+                    "localId": {
+                      "type": "string",
+                      "example": "PcgZHQ3mB8go7yUGOtXxtOy5VGp2"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "test@jbnu.ac.kr"
+                    },
+                    "kind": {
+                      "type": "string",
+                      "example": "identitytoolkit#VerifyPasswordResponse"
+                    },
+                    "displayName": {
+                      "type": "string",
+                      "example": ""
+                    },
+                    "registered": {
+                      "type": "string",
+                      "example": "true"
+                    },
+                    "refreshToken": {
+                      "type": "string",
+                      "example": "AEu4IL0nbGl57..."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "INVALID_PASSWORD"
+                        },
+                        "errors": {
+                          "type": "object",
+                          "properties": {
+                            "message": {
+                              "type": "string",
+                              "example": "INVALID_PASSWORD"
+                            },
+                            "domain": {
+                              "type": "string",
+                              "example": "global"
+                            },
+                            "reason": {
+                              "type": "string",
+                              "example": "invalid"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "User registration",
+        "description": "Endpoint for user registration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "user@example.com"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "password123!"
+                  },
+                  "returnSecureToken": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                },
+                "required": [
+                  "email",
+                  "password",
+                  "returnSecureToken"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful registration",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "idToken": {
+                      "type": "string",
+                      "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI1ZTk3Zjcw..."
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "test@jbnu.ac.kr"
+                    },
+                    "refreshToken": {
+                      "type": "string",
+                      "example": "AEu4IL2-9x1PdG7S6sQ_fAOlHDG7XQyZ5Hluzq4fsKuODTfsPaxDkmNfKJkF67YwZ0Ow1hZYw01sPLy_3Z0J8ChtBzjkV9G4jZHLuzq4fsKuODTfsPaxDkmNfKJkF67YwZ0Ow1hZYw01sPLy_3Z0J8ChtBzjkV9G4jZ"
+                    },
+                    "expiresIn": {
+                      "type": "string",
+                      "example": "3600"
+                    },
+                    "localId": {
+                      "type": "string",
+                      "example": "abcd1234"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "EMAIL_EXISTS"
+                        },
+                        "errors": {
+                          "type": "object",
+                          "properties": {
+                            "message": {
+                              "type": "string",
+                              "example": "EMAIL_EXISTS"
+                            },
+                            "domain": {
+                              "type": "string",
+                              "example": "global"
+                            },
+                            "reason": {
+                              "type": "string",
+                              "example": "invalid"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/register_db": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "User registration DB",
+        "description": "Endpoint for user registration db",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "test"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "user@example.com"
+                  },
+                  "returnSecureToken": {
+                    "type": "boolean",
+                    "example": true
+                  }
+                },
+                "required": [
+                  "name",
+                  "email",
+                  "returnSecureToken"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful registration",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "회원가입이 완료되었습니다."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "회원가입 실패"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/google-auth": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Google authentication",
+        "description": "Endpoint for Google authentication",
+        "responses": {
+          "200": {
+            "description": "Successful Google authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": "1234567890"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "test@gmail.com"
+                    },
+                    "verified_email": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "김은혜"
+                    },
+                    "given_name": {
+                      "type": "string",
+                      "example": "은혜"
+                    },
+                    "family_name": {
+                      "type": "string",
+                      "example": "김"
+                    },
+                    "picture": {
+                      "type": "string",
+                      "example": "https://lh3.googleusercontent.com/a/ACg8ocL_x_RXgXmyInpDSMOH2XGGu4LajFOmDaM-m7jYdhkzwtsrTzs=s96-c"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "properties": {
+                        "domain": {
+                          "type": "string",
+                          "example": "global"
+                        },
+                        "reason": {
+                          "type": "string",
+                          "example": "authError"
+                        },
+                        "message": {
+                          "type": "string",
+                          "example": "Invalid Credentials"
+                        },
+                        "locationType": {
+                          "type": "string",
+                          "example": "header"
+                        },
+                        "location": {
+                          "type": "string",
+                          "example": "Authorization"
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Invalid Credentials"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "Google authentication DB",
+        "description": "Endpoint for Google authentication db",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "example": "1234567890"
+                  },
+                  "email": {
+                    "type": "string",
+                    "example": "test@gmail.com"
+                  },
+                  "verified_email": {
+                    "type": "boolean",
+                    "example": true
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "김은혜"
+                  },
+                  "given_name": {
+                    "type": "string",
+                    "example": "은혜"
+                  },
+                  "family_name": {
+                    "type": "string",
+                    "example": "김"
+                  },
+                  "picture": {
+                    "type": "string",
+                    "example": "https://lh3.googleusercontent.com/a/ACg8ocL_x_RXgXmyInpDSMOH2XGGu4LajFOmDaM-m7jYdhkzwtsrTzs=s96-c"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Google authentication",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "구글 로그인 성공"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "구글 로그인 실패"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chat-api": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Interact with a historical figure chatbot",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "request_message": {
+                    "type": "string",
+                    "example": "너의 업적을 알려줘",
+                    "description": "The message from the user."
+                  },
+                  "character_name": {
+                    "type": "string",
+                    "example": "Sejong",
+                    "description": "engineered as King Sejong the Great."
+                  },
+                  "who": {
+                    "type": "string",
+                    "example": "PcgZHQ3mB8go7yUGOtXxtOy5VGp2",
+                    "description": "User's UID'"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "A successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "response_message": {
+                      "type": "string",
+                      "example": "짐이 한글을 창제하여 백성들이 쉽게 글을 읽고 쓸 수 있게 하였소. 또한, 과학기술을 발전시키기 위해 측우기와 해시계 등을 도입하였소. 아울러, 백성들의 생활을 개선하기 위해 여러 법령을 제정하였소.",
+                      "description": "The response messag  e from the chatbot."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "오류 발생!"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/setting": {
+      "get": {
+        "tags": [
+          "setting"
+        ],
+        "summary": "Get user settings",
+        "description": "Endpoint to get user settings",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "email": {
+                      "type": "string",
+                      "example": "user@example.com"
+                    },
+                    "nickname": {
+                      "type": "string",
+                      "example": "nickname"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "setting"
+        ],
+        "summary": "Update user settings",
+        "description": "Endpoint to update user settings",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "idToken": {
+                    "type": "string",
+                    "example": "idToken"
+                  },
+                  "returnSecureToken": {
+                    "type": "boolean",
+                    "example": "true"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "newPassword"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful update",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "localId": {
+                      "type": "string",
+                      "example": "1234567890"
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "test@jbnu.ac.kr"
+                    },
+                    "passwordHash": {
+                      "type": "string",
+                      "example": "UkVEQUNURUQ="
+                    },
+                    "providerUserInfo": {
+                      "type": "object",
+                      "properties": {
+                        "providerId": {
+                          "type": "string",
+                          "example": "password"
+                        },
+                        "federatedId": {
+                          "type": "string",
+                          "example": "test@jbnu.ac.kr"
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "test@jbnu.ac.kr"
+                        },
+                        "rawId": {
+                          "type": "string",
+                          "example": "test@jbnu.ac.kr"
+                        },
+                        "screenName": {
+                          "type": "string",
+                          "example": "nickname"
+                        }
+                      }
+                    },
+                    "idToken": {
+                      "type": "string",
+                      "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ij..."
+                    },
+                    "refreshToken": {
+                      "type": "string",
+                      "example": "AEu4IL2h0..."
+                    },
+                    "expiresIn": {
+                      "type": "integer",
+                      "example": "3600"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errors": {
+                      "type": "object",
+                      "properties": {
+                        "message": {
+                          "type": "string",
+                          "example": "Update failed."
+                        },
+                        "domain": {
+                          "type": "string",
+                          "example": "global"
+                        },
+                        "reason": {
+                          "type": "string",
+                          "example": "invalid"
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Update failed."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "setting"
+        ],
+        "summary": "Delete user chat data",
+        "description": "Endpoint to delete user chat data",
+        "responses": {
+          "200": {
+            "description": "Successful deletion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "모든 채팅 기록이 삭제되었습니다."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chat_fetch_list": {
+      "get": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Fetch chat list",
+        "description": "Endpoint to fetch chat list",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "great": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "background": {
+                            "type": "string",
+                            "example": "/gyeongbokgung.png"
+                          },
+                          "cards": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "content": {
+                                  "type": "string",
+                                  "example": "백성을 가르치는 바른 소리라는 뜻이다..."
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "example": "/sejongCard.png"
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "example": "훈민정음"
+                                }
+                              }
+                            }
+                          },
+                          "comment": {
+                            "type": "string",
+                            "example": "훈민정음~ 훈민정음~"
+                          },
+                          "id": {
+                            "type": "string",
+                            "example": "sejong"
+                          },
+                          "image": {
+                            "type": "string",
+                            "example": "/sejong.png"
+                          },
+                          "name": {
+                            "type": "string",
+                            "example": "세종대왕"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "chat list",
+        "description": "chat list",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "background": {
+                    "type": "string",
+                    "example": "/gyeongbokgung.png"
+                  },
+                  "cards": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "content": {
+                          "type": "string",
+                          "example": "백성을 가르치는 바른 소리라는 뜻이다..."
+                        },
+                        "image": {
+                          "type": "string",
+                          "example": "/sejongCard.png"
+                        },
+                        "title": {
+                          "type": "string",
+                          "example": "훈민정음"
+                        }
+                      }
+                    }
+                  },
+                  "comment": {
+                    "type": "string",
+                    "example": "훈민정음~ 훈민정음~"
+                  },
+                  "id": {
+                    "type": "string",
+                    "example": "sejong"
+                  },
+                  "image": {
+                    "type": "string",
+                    "example": "/sejong.png"
+                  },
+                  "name": {
+                    "type": "string",
+                    "example": "세종대왕"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "chat list",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chat_fetch_last": {
+      "get": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Fetch messages",
+        "description": "Endpoint to fetch last messages",
+        "responses": {
+          "200": {
+            "description": "The last message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "chatMessage": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string",
+                            "example": "짐이 그대의 안부를 묻노라..."
+                          },
+                          "sender": {
+                            "type": "string",
+                            "example": "세종대왕"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/chat": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "chat message record",
+        "description": "Endpoint to record a chat message db",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string",
+                    "example": "안녕하세요"
+                  },
+                  "sender": {
+                    "type": "string",
+                    "example": "user"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Message sent successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "failed"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dialogInfo": {
+      "delete": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Delete chat records",
+        "description": "Endpoint to delete chat records for a dialog",
+        "responses": {
+          "200": {
+            "description": "Successful deletion",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "삭제되었습니다"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "no data"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Message": {
+        "type": "object",
+        "properties": {
+          "sender": {
+            "type": "string",
+            "example": "user"
+          },
+          "message": {
+            "type": "string",
+            "example": "안녕하세요"
+          }
+        }
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "password123!"
+          },
+          "returnSecureToken": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "idToken": {
+            "type": "string",
+            "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI1ZTk3Zjcw..."
+          },
+          "expiresIn": {
+            "type": "integer",
+            "example": "3600"
+          },
+          "localId": {
+            "type": "string",
+            "example": "PcgZHQ3mB8go7yUGOtXxtOy5VGp2"
+          },
+          "email": {
+            "type": "string",
+            "example": "test@jbnu.ac.kr"
+          },
+          "kind": {
+            "type": "string",
+            "example": "identitytoolkit#VerifyPasswordResponse"
+          },
+          "displayName": {
+            "type": "string",
+            "example": ""
+          },
+          "registered": {
+            "type": "string",
+            "example": "true"
+          },
+          "refreshToken": {
+            "type": "string",
+            "example": "AEu4IL0nbG157..."
+          }
+        }
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "password123!"
+          },
+          "returnSecureToken": {
+            "type": "boolean",
+            "example": true
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "password",
+          "confirmPassword",
+          "returnSecureToken"
+        ]
+      },
+      "RegisterResponse": {
+        "type": "object",
+        "properties": {
+          "idToken": {
+            "type": "string",
+            "example": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjI1ZTk3Zjcw..."
+          },
+          "expiresIn": {
+            "type": "integer",
+            "example": "3600"
+          },
+          "email": {
+            "type": "string",
+            "example": "test@jbnu.ac.kr"
+          },
+          "refreshToken": {
+            "type": "string",
+            "example": "AEu4IL2-9x1PdG7S6sQ_fAOlHDG7XQyZ5Hluzq4fsKuODTfsPaxDkmNfKJkF67YwZ0Ow1hZYw01sPLy_3Z0J8ChtBzjkV9G4jZHLuzq4fsKuODTfsPaxDkmNfKJkF67YwZ0Ow1hZYw01sPLy_3Z0J8ChtBzjkV9G4jZ"
+          },
+          "localId": {
+            "type": "string",
+            "example": "abcd1234"
+          }
+        }
+      },
+      "GoogleAuthResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "1234567890"
+          },
+          "email": {
+            "type": "string",
+            "example": "test@gmail.com"
+          },
+          "verified_email": {
+            "type": "integer",
+            "example": 3600
+          },
+          "name": {
+            "type": "string",
+            "example": "김은혜"
+          },
+          "given_name": {
+            "type": "string",
+            "example": "은혜"
+          },
+          "family_name": {
+            "type": "string",
+            "example": "김"
+          },
+          "picture": {
+            "type": "string",
+            "example": "https://lh3.googleusercontent.com/a/ACg8ocL_x_RXgXmyInpDSMOH2XGGu4LajFOmDaM-m7jYdhkzwtsrTzs=s96-c"
+          }
+        }
+      },
+      "Chat_fetch_list_Response": {
+        "type": "object",
+        "properties": {
+          "background": {
+            "type": "string",
+            "example": "/gyeongbokgung.png"
+          },
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "example": "백성을 가르치는 바른 소리라는 뜻이다..."
+                },
+                "image": {
+                  "type": "string",
+                  "example": "/sejongCard.png"
+                },
+                "title": {
+                  "type": "string",
+                  "example": "훈민정음"
+                }
+              }
+            }
+          },
+          "comment": {
+            "type": "string",
+            "example": "훈민정음~ 훈민정음~"
+          },
+          "id": {
+            "type": "string",
+            "example": "sejong"
+          },
+          "image": {
+            "type": "string",
+            "example": "/sejong.png"
+          },
+          "name": {
+            "type": "string",
+            "example": "세종대왕"
+          }
+        }
+      }
+    }
+  }
+}

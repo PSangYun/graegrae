@@ -1,0 +1,72 @@
+.dialogInfoContainer {
+    display: flex;
+    flex-direction: column; /* 다이얼로그를 세로 방향으로 배치합니다. */
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 60%;
+    background-color: white;
+    border-radius: 12px;
+}
+.infocontainerHeader {
+    display: flex;
+    margin-top: 8%;
+    padding-bottom: 2%;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 0.5px solid #C8C8C8;
+}
+.infodialogTitle{
+    margin-left: 10%;
+    font-size: 30px;
+    font-weight: bold;
+}
+.dialoginfoCloseBtn{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(0, 0, 0, 0.0);
+    border-color: rgb(0, 0, 0, 0);
+}
+.dialogInfoBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.dialogImg{
+    width: 70%;
+    height: 60%;
+    border-radius: 15px;
+    object-fit: cover;
+    justify-content: center;
+    display: flex;
+}
+.dialogNavigate{
+    position: relative; /* 이미지를 기준으로 상대적으로 위치 조정 */
+    top: -10%; /* 이미지 위로 30px 이동 */
+    background-color: rgb(0,0,0,0.5);
+    width:70%;
+    height: 10%;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: end;
+}
+.dialogName{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+.deleteChatBtn{
+    background-color:rgba(0,0,0,0);
+    border : rgba(0,0,0,0);
+    color:red;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 0;
+}

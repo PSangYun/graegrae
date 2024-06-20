@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* 화면 전체 높이를 채우도록 설정 */
+    width: 100%; /* 화면 전체 너비를 채우도록 설정 */
+    overflow: hidden; /* 필요한 경우 스크롤바가 나타나지 않도록 설정 */
+  }
+
+  .ProfileDetail {
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    flex-direction: row;
+  }
+  .detailSideBar {
+    position: fixed; /* 고정 위치 */
+    top: 0; /* 화면 위쪽에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    height: 100%; /* 화면 전체 높이 */
+    background-image: url("../public/background.png");
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top:20px;
+    width:5%;
+    min-width: 70px;
+  }
+  .profile {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0); /* 아이콘을 위한 연한 반투명 검정 배경 */
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(113, 54, 11, 1);
+  }
+  .chat img{
+    margin-right: 20px;
+    width: 32px;
+    height: auto;
+  }
+  .chat.setting{
+    margin-bottom: 10px;
+  }
+
+  .ProfileMainContent{
+    position: relative;
+    width:95%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    margin-right:0;
+    margin-left:auto;
+    overflow-y: auto; /* 세로 스크롤을 표시하고 내용이 넘칠 때 스크롤 가능하도록 설정 */
+
+  }
+  
+  .profileBackground {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .profileImage {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    transform: translate(0%, -50%);
+    z-index: 2;
+  }
+  
+  .profileName {
+    position: relative;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+    top: -15%;
+  }
+
+  .profileComment {
+    position: relative;
+    top: -15%;
+  }
