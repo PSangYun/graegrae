@@ -179,6 +179,8 @@ vscode 터미널 2개 생성
 
 * *swagger documentation*
   * http://localhost:3000/api-docs
+ 
+    ![swagger](https://github.com/PSangYun/graegrae/blob/main/swagger.png)
 
 <br/>
 
