@@ -83,6 +83,8 @@ vscode 터미널 2개 생성
     npm install react-spring-3d-carousel
     
     npm install @mui/material @emotion/react @emotion/styled
+
+    npm install swagger-ui-react swagger-ui-dist
 ```
     
  2. 실행
