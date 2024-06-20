@@ -177,6 +177,9 @@ vscode 터미널 2개 생성
     
     ![chat](https://github.com/PSangYun/graegrae/blob/main/chat.png)
 
+* *swagger documentation*
+  * http://localhost:3000/api-docs
+
 <br/>
 
 ## ⚙개발환경
