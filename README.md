@@ -213,4 +213,4 @@ vscode 터미널 2개 생성
 
 <br/><br/>
 
-This project is licensed under the terms of the ~~~.
+This project is licensed under the terms of the MIT license.
