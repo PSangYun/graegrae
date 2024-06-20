@@ -108,7 +108,7 @@ vscode 터미널 2개 생성
 <br/>
 
 * FrontApp의 ChatStart.jsx에서 107번째 줄의 fetch경로를 자신의 [ip]를 포함한 uri로 바꾼다. (ex: http://***[ip]***:5000/chat-api)
-* greaApp의 App.js에서 42번째 줄의 uri를 자신의 [ip]를 포함한 uri로 바꾼다.  (ex: http://***[ip]***:3000/)
+* greaApp의 App.js에서 43번째 줄의 uri를 자신의 [ip]를 포함한 uri로 바꾼다.  (ex: http://***[ip]***:3000/)
 
 <br/>
 
