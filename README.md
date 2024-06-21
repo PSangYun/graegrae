@@ -183,6 +183,10 @@ vscode 터미널 2개 생성
 
 <br/>
 
+* [Notion](https://axiomatic-jelly-b5c.notion.site/Oss-Team-Space-c85bd6a5b7804ecd9d1e06ee71ccca44?pvs=4)
+
+  
+
 * *swagger documentation*
   * http://localhost:3000/api-docs
  
