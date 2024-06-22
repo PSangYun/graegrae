@@ -27,7 +27,7 @@
 
 git clone 후 vscode에서 폴더 오픈
 
->Notion에서 다음 파일 다운로드
+>Notion -> Private 페이지에서 다음 파일 다운로드
 * **env.txt**
     * **env.txt파일 이름을 .env로 바꾼다.**
   
